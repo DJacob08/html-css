@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Flexbox</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=menu,menu_open,settings&display=block">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css" media="screen and (min-width: 580px)">
+
+    
+    
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>
             Meu Site
         </h1>
-        <nav>
+        <i class="material-symbols-outlined" id="burger" onclick="clickMenu ()">menu</i>
+        <nav id="itens">
             <a href="#">Opção 1</a>
             <a href="#">Opção 2</a>
             <a href="#">Opção 3</a>
@@ -31,5 +37,22 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis ea aliquam odio nobis dolorem, in veniam ad iste natus accusamus quibusdam reiciendis labore similique excepturi incidunt, expedita minus cupiditate.
         </p>
     </main>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >=580) {
+                itens.style.display = 'flex'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+        
+        function clickMenu () {
+            if (itens.style.display == 'flex') {
+                itens.style.display = 'none' 
+            } else {
+                itens.style.display = 'flex'
+            }
+        }
+    </script>
 </body>
 </html>

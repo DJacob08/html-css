@@ -28,7 +28,7 @@ i#burger {
     cursor: pointer;
 }
 
-span#burger:hover {
+i#burger:hover {
     background-color: white;
     color: black;
     transition: 0.3s;
