@@ -1,0 +1,30 @@
+.container {
+    padding: 5px;
+    border: 2px dashed blue;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.caixa {
+    border: 2px dashed red;
+}
+
+#caixa1 {
+    background-color: darkred;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 4;
+} 
+
+#caixa2 {
+    background-color: darkgreen;
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 2;
+}
+
+#caixa3 {
+    background-color: darkblue;
+    grid-row: 2 / span 2;
+    grid-column: 3 / span 2;
+}
